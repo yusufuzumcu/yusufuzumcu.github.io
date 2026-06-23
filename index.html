@@ -114,11 +114,13 @@
     border-radius:var(--r);padding:24px}
   .chart-card h3{font-size:15.5px;font-weight:800}
   .chart-card .csub{color:var(--tx3);font-size:12.5px;margin-top:3px;margin-bottom:18px}
-  .bar-row{display:flex;align-items:center;gap:12px;margin-bottom:14px}
-  .bar-lab{width:120px;font-size:12.5px;color:var(--tx2);text-align:right;flex-shrink:0}
-  .bar-track{flex:1;height:26px;background:var(--bg);border-radius:7px;overflow:hidden;position:relative;border:1px solid var(--line)}
-  .bar-fill{height:100%;border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:9px;
-    font-size:12px;font-weight:800;color:#1a1407;width:0;transition:width 1.1s cubic-bezier(.2,.8,.2,1)}
+  .rs{display:flex;flex-direction:column;gap:12px}
+  .rs-row{padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:var(--bg)}
+  .rs-row.rs-current{border-color:var(--acc)}
+  .rs-label{font-size:11px;color:var(--tx3);font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+  .rs-nums{display:flex;flex-wrap:wrap;gap:6px}
+  .rs-nums span{font-size:13px;font-weight:700;color:var(--tx1);background:var(--card2);border:1px solid var(--line2);padding:3px 10px;border-radius:6px}
+  .rs-row.rs-current .rs-nums span{border-color:var(--accdim);color:var(--acc2)}
   .legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:8px;font-size:12.5px;color:var(--tx2)}
   .dot{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:middle}
 
@@ -202,13 +204,13 @@
   <div class="wrap">
     <div class="s-head reveal">
       <div class="s-kicker" data-en="Track record" data-de="Erfolgsbilanz">Erfolgsbilanz</div>
-      <div class="s-title" data-en="What I have delivered" data-de="Was ich geliefert habe">Was ich geliefert habe</div>
+      <div class="s-title" data-en="Numbers, not promises" data-de="Zahlen statt Versprechen">Zahlen statt Versprechen</div>
     </div>
     <div class="metrics">
       <div class="metric reveal"><div class="num">10+</div><div class="lab" data-en="Years in B2B high-tech sales &amp; BD" data-de="Jahre B2B-High-Tech-Vertrieb &amp; BD">Jahre B2B-High-Tech-Vertrieb &amp; BD</div></div>
       <div class="metric reveal"><div class="num">~20 M€</div><div class="lab" data-en="Annual revenue responsibility (70+ contracts)" data-de="Jährliche Umsatzverantwortung (70+ Verträge)">Jährliche Umsatzverantwortung (70+ Verträge)</div></div>
       <div class="metric reveal"><div class="num">1,8 M€</div><div class="lab" data-en="Largest single deal closed, full cycle" data-de="Größter Einzelabschluss, kompletter Zyklus">Größter Einzelabschluss, kompletter Zyklus</div></div>
-      <div class="metric reveal"><div class="num">10</div><div class="lab" data-en="Countries scaled from greenfield (MEA + Turkey)" data-de="Länder aus dem Nichts aufgebaut (MEA + Türkei)">Länder aus dem Nichts aufgebaut (MEA + Türkei)</div></div>
+      <div class="metric reveal"><div class="num">7</div><div class="lab" data-en="Countries scaled from greenfield (MEA + Turkey)" data-de="Länder aus dem Nichts aufgebaut (MEA + Türkei)">Länder aus dem Nichts aufgebaut (MEA + Türkei)</div></div>
     </div>
   </div>
 </section>
@@ -224,8 +226,8 @@
       <div class="inner">
         <p data-de="Mein Hebel liegt an der Schnittstelle, an der die meisten scheitern: zwischen Technik und Markt. Ich verkaufe nichts, das ich nicht selbst verstanden, gesehen und durchgerechnet habe — und genau das macht den Unterschied bei technisch anspruchsvollen Kunden."
            data-en="My leverage sits at the interface where most people stall: between engineering and the market. I never sell what I have not understood, seen and worked through myself — and with technically demanding customers, that is exactly what makes the difference.">Mein Hebel liegt an der Schnittstelle, an der die meisten scheitern: zwischen Technik und Markt. Ich verkaufe nichts, das ich nicht selbst verstanden, gesehen und durchgerechnet habe — und genau das macht den Unterschied bei technisch anspruchsvollen Kunden.</p>
-        <p data-de="Drei Stationen, ein Muster: eine Greenfield-Region über 10 Länder auf ~5 M€ skaliert, ein 20-M€-Portfolio aus 70+ Verträgen verantwortet und um ~10 % p.a. gewachsen, und für ein AM-Startup im Konzern die komplette kommerzielle Infrastruktur von null aufgebaut — GTM-Strategie, CRM, Key Accounts."
-           data-en="Three roles, one pattern: scaled a greenfield region across 10 countries to ~€5M, owned a €20M portfolio of 70+ contracts and grew it ~10% per year, and built the full commercial infrastructure for an AM startup inside a global group from zero — GTM strategy, CRM, key accounts.">Drei Stationen, ein Muster: eine Greenfield-Region über 10 Länder auf ~5 M€ skaliert, ein 20-M€-Portfolio aus 70+ Verträgen verantwortet und um ~10 % p.a. gewachsen, und für ein AM-Startup im Konzern die komplette kommerzielle Infrastruktur von null aufgebaut — GTM-Strategie, CRM, Key Accounts.</p>
+        <p data-de="Drei Stationen, ein Muster: eine Greenfield-Region über 7 Länder (Türkei, Katar, Jordanien, Iran, Saudi-Arabien, UAE, Südafrika) auf ~5 M€ skaliert, ein 20-M€-Portfolio aus 70+ Verträgen verantwortet und um ~10 % p.a. gewachsen, und für ein AM-Startup im Konzern die komplette kommerzielle Infrastruktur von null aufgebaut — GTM-Strategie, CRM, Key Accounts."
+           data-en="Three roles, one pattern: scaled a greenfield region across 7 countries (Turkey, Qatar, Jordan, Iran, Saudi Arabia, UAE, South Africa) to ~€5M, owned a €20M portfolio of 70+ contracts and grew it ~10% per year, and built the full commercial infrastructure for an AM startup inside a global group from zero — GTM strategy, CRM, key accounts.">Drei Stationen, ein Muster: eine Greenfield-Region über 7 Länder (Türkei, Katar, Jordanien, Iran, Saudi-Arabien, UAE, Südafrika) auf ~5 M€ skaliert, ein 20-M€-Portfolio aus 70+ Verträgen verantwortet und um ~10 % p.a. gewachsen, und für ein AM-Startup im Konzern die komplette kommerzielle Infrastruktur von null aufgebaut — GTM-Strategie, CRM, Key Accounts.</p>
         <p data-de="Was mich antreibt: die durchgängige Wertschöpfungskette gegen das Silo — von der Idee über die Herstellung bis zum Markt. Ruhig im Auftreten, konkret in der Sache."
            data-en="What drives me: the end-to-end value chain against the silo — from idea through production to market. Calm in manner, concrete on substance.">Was mich antreibt: die durchgängige Wertschöpfungskette gegen das Silo — von der Idee über die Herstellung bis zum Markt. Ruhig im Auftreten, konkret in der Sache.</p>
       </div>
@@ -293,9 +295,9 @@
         <div class="role" data-en="Area Sales Manager EMEA" data-de="Area Sales Manager EMEA">Area Sales Manager EMEA</div>
         <div class="org" data-en="Middle East, Africa &amp; Turkey — greenfield" data-de="Naher Osten, Afrika &amp; Türkei — Greenfield">Naher Osten, Afrika &amp; Türkei — Greenfield</div>
         <ul>
-          <li data-de="<b>Greenfield-Region über 10 Länder</b> übernommen und im Spitzenjahr auf <b>~5 M€ Jahresumsatz</b> skaliert."
-              data-en="Took over a <b>greenfield territory across 10 countries</b> and scaled it to <b>~€5M annual revenue</b> in the peak year.">
-              <b>Greenfield-Region über 10 Länder</b> übernommen und im Spitzenjahr auf <b>~5 M€ Jahresumsatz</b> skaliert.</li>
+          <li data-de="<b>Greenfield-Region über 7 Länder</b> (TR, QA, JO, IR, SA, AE, ZA) übernommen und im Spitzenjahr auf <b>~5 M€ Jahresumsatz</b> skaliert."
+              data-en="Took over a <b>greenfield territory across 7 countries</b> (TR, QA, JO, IR, SA, AE, ZA) and scaled it to <b>~€5M annual revenue</b> in the peak year.">
+              <b>Greenfield-Region über 7 Länder</b> (TR, QA, JO, IR, SA, AE, ZA) übernommen und im Spitzenjahr auf <b>~5 M€ Jahresumsatz</b> skaliert.</li>
           <li data-de="<b>Größten Einzelabschluss der Region bei 1,8 M€</b> geschlossen — vom Prospecting bis zur Vertragsverhandlung über den gesamten Zyklus."
               data-en="Closed the <b>largest single deal in the region at €1.8M</b> — full cycle from prospecting through contract negotiation.">
               <b>Größten Einzelabschluss der Region bei 1,8 M€</b> geschlossen — vom Prospecting bis zur Vertragsverhandlung über den gesamten Zyklus.</li>
@@ -326,9 +328,41 @@
     </div>
     <div class="charts">
       <div class="chart-card reveal">
-        <h3 data-en="Revenue responsibility per role" data-de="Umsatzverantwortung je Rolle">Umsatzverantwortung je Rolle</h3>
-        <div class="csub" data-en="Annual revenue / portfolio under management (M€)" data-de="Jahresumsatz / verantwortetes Portfolio (M€)">Jahresumsatz / verantwortetes Portfolio (M€)</div>
-        <div id="bars"></div>
+        <h3 data-en="Key numbers per role" data-de="Kennzahlen je Station">Kennzahlen je Station</h3>
+        <div class="csub" data-en="Selected KPIs per position" data-de="Ausgewählte KPIs je Position">Ausgewählte KPIs je Position</div>
+        <div class="rs">
+          <div class="rs-row rs-current">
+            <div class="rs-label" data-en="Senior BD Manager · ArcelorMittal Powders · 2023–2026" data-de="Senior BD Manager · ArcelorMittal Powders · 2023–2026">Senior BD Manager · ArcelorMittal Powders · 2023–2026</div>
+            <div class="rs-nums">
+              <span data-en="Pipeline from scratch" data-de="Pipeline von Grund auf">Pipeline von Grund auf</span>
+              <span data-en="Top-3 OEM shortlist" data-de="Top-3-OEM-Shortlist">Top-3-OEM-Shortlist</span>
+              <span data-en="Multi-M€ opportunity base" data-de="Multi-M€ Opportunity-Basis">Multi-M€ Opportunity-Basis</span>
+            </div>
+          </div>
+          <div class="rs-row">
+            <div class="rs-label" data-en="Life Cycle Solutions Manager · 2021–2023" data-de="Life Cycle Solutions Manager · 2021–2023">Life Cycle Solutions Manager · 2021–2023</div>
+            <div class="rs-nums">
+              <span>~20 M€</span>
+              <span data-en="70+ contracts" data-de="70+ Verträge">70+ Verträge</span>
+              <span>+10 % p.a.</span>
+            </div>
+          </div>
+          <div class="rs-row">
+            <div class="rs-label" data-en="Partner Manager · 2020–2021" data-de="Partner Manager · 2020–2021">Partner Manager · 2020–2021</div>
+            <div class="rs-nums">
+              <span data-en="5 EMEA partners" data-de="5 EMEA-Partner">5 EMEA-Partner</span>
+              <span data-en="70% partner channel" data-de="70 % Partnerkanal">70 % Partnerkanal</span>
+            </div>
+          </div>
+          <div class="rs-row">
+            <div class="rs-label" data-en="Area Sales EMEA · 2016–2020" data-de="Area Sales EMEA · 2016–2020">Area Sales EMEA · 2016–2020</div>
+            <div class="rs-nums">
+              <span data-en="7 countries" data-de="7 Länder">7 Länder</span>
+              <span>~5 M€</span>
+              <span data-en="1.8M€ largest deal" data-de="1,8 M€ größter Deal">1,8 M€ größter Deal</span>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="chart-card reveal">
         <h3 data-en="Channel mix shift — Partner Manager" data-de="Kanalmix-Verschiebung — Partner Manager">Kanalmix-Verschiebung — Partner Manager</h3>
@@ -451,21 +485,6 @@
     document.getElementById('bde').classList.toggle('on',l==='de');
     document.getElementById('ben').classList.toggle('on',l==='en');
   }
-
-  // Bar chart data
-  var bars=[
-    {l:'EOS · Life Cycle',v:20,c:'#d4a857',t:'~20 M€'},
-    {l:'AM · Greenfield EMEA',v:5,c:'#cBa25a',t:'~5 M€'},
-    {l:'EOS · Largest deal',v:1.8,c:'#5fb6b0',t:'1,8 M€'},
-    {l:'ArcelorMittal · Target',v:1,c:'#5fb6b0',t:'~1 M€'}
-  ];
-  var max=20;
-  var html=bars.map(function(b){
-    return '<div class="bar-row"><div class="bar-lab">'+b.l+'</div>'+
-      '<div class="bar-track"><div class="bar-fill" data-w="'+(b.v/max*100)+'" '+
-      'style="background:linear-gradient(90deg,'+b.c+','+b.c+'cc)">'+b.t+'</div></div></div>';
-  }).join('');
-  document.getElementById('bars').innerHTML=html;
 
   // Animate on reveal
   var io=new IntersectionObserver(function(es){
